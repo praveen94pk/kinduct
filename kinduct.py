@@ -119,3 +119,18 @@ def task5_gp_agg(summation, total_players):
 #the data frame having the summation of games played.
 #2. Games played divided by the total number of players gives us the aggregation of games played.
 
+#Task 6: Mins_over_GA_agg: Total minutes played / total goals against
+        
+#Assumptions : Assuming the the minutes over goals against has to be calculated according to the players level.
+
+def task6_ga_agg(summation):
+    print('Started Task 6')
+    mins_over_ga = summation["Min"]/summation["GA"]
+    print('Executed Task 6')
+    return round(mins_over_ga, 2)
+    
+#Implementation: 
+
+#1. The summation data frame having all the summed up numerical columns grouped according to the playerID. 
+#2. The minutes over the goals against, column Min (Minutes) in
+#the data frame having the summation of total minutes played and column GA has total goals against.
