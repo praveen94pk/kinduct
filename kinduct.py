@@ -150,3 +150,39 @@ def task7_ga_over_sa_agg(summation):
 #1. The summation data frame has all the summed up numerical columns grouped according to the playerID. 
 #2. Aggregation done by dividing summation of goals against divided by the summation of shots against.
 
+
+#Task 8: avg_percentage_wins: calculate the percentage of games won for each player, then take the
+#mean at team level
+        
+#Assumptions 1 : Assuming the average of percentage wins has to be calculated according to the players level. Grouping the data according to the players
+#the players level and calculating the percentage of games won for each year.
+
+#Assumptions 2: Assuming the mean has to be calculated according to the team level.
+
+def task8_avg_percentage_wins(summation,summation_team,total_teams):
+    print('Started Task 8')
+    wins = summation["W"]
+    gp = summation["GP"]
+    percentage = (wins/gp) * 100 
+    
+
+#Average wins percentage according to the team level
+    
+    wins_team = summation_team["W"]
+    mean = (wins_team/ total_teams) 
+    print('Executed Task 8')
+    return round(percentage, 2), round(mean, 2)
+    
+    
+#Implementation: 
+    
+#1. The summation data frame having all the summed up numerical columns grouped according to the playerID. 
+#2. The columns needed for our task includes summation of wins and games played to calculate the percentage. 
+#3. We achieved calculating the percentage by using the formula (wins/gp) * 100 and added as a column in 
+#our data frame.
+#4. The summation_team data frame having all the summed up numerical columns grouped according to the teams.
+#5. Finally, we achieved calculating the mean by using the formula (wins_team/ total_teams) and added as a column in 
+#our data frame.
+
+
+
