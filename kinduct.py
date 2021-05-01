@@ -184,5 +184,27 @@ def task8_avg_percentage_wins(summation,summation_team,total_teams):
 #5. Finally, we achieved calculating the mean by using the formula (wins_team/ total_teams) and added as a column in 
 #our data frame.
 
+#Task 9: most_goals_stopped: {‘playerID’: playerID, ‘goals_stopped’: goals_stopped}
+        
+#Assumptions : Assuming the most goals stopped has to be calculated according to the players level.
+#Calculating the most number of goals stopped by the goal keepers and inserting into the dictionary data type respectively. 
+
+def task9_most_goals_stopped(summation,data):
+    print('Started Task 9')
+    goals_stopped= summation["SA"]
+    goals_stopped
+    max_goals= data.groupby(['playerID']).max()  
+
+    res_dict = {}
+    for playerID in max_goals:
+        res_dict[playerID] = max_goals['SA']
+    print('Executed Task 9')
+    return res_dict
+    
+#Implementation: 
+
+#1. Firstly, we have summed up the goals stopped by the goalies and we need to calculate the maximum number of goals stopped by the individual player respectively. 
+#2. We are accessing the each row in the data frame and making it in to a dictionary. 
+
 
 
