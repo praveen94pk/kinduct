@@ -206,5 +206,24 @@ def task9_most_goals_stopped(summation,data):
 #1. Firstly, we have summed up the goals stopped by the goalies and we need to calculate the maximum number of goals stopped by the individual player respectively. 
 #2. We are accessing the each row in the data frame and making it in to a dictionary. 
 
+#Task 10: most_efficient_player: {‘playerID’: playerID, ‘efficiency’: goals_stopped / minutes played}
+        
+#Assumptions : Assuming the efficient player has to be calculated according to the players level
+#Calculating the most efficient player with the help of goals stopped divided by the minutes played and finally inserting into the dictionary data type respectively.
+
+def task10_most_efficient_player(summation):
+    print('Started Task 10')
+    res_dict2 = {}
+    for playerID in summation:
+        res_dict2[playerID] = summation['SA'] / summation['Min']
+    print('Executed Task 10')
+    return res_dict2
+    
+
+#Implementation: 
+
+#1. Firstly, we have summed up the goals stopped and the minutes played by the goalies and then we need to aggregate by dividing those. 
+#2. We are accessing the each row in the dataframe and making it in to 
+#a dictionary.
 
 
