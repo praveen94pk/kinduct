@@ -55,5 +55,19 @@ def task2_rename(kinduct_data):
 
 #Implementation: The first letter of the year is in small letter and changed into capital letter by using rename function.
 
+#Task 3: Wins_agg: total wins / total players
+        
+#Calculating the winning aggregation of the players. 
+
+#Assumptions : Assuming the winning aggregation has to be calculated according to the players level. 
+#To acheive this we are grouping the data according to the players played in the hockey matches respectively. 
+
+def task3_wins_agg(summation, total_players):
+    print('Started Task 3')
+    Wins_agg = (summation["W"]/total_players)
+    print('Executed Task 3')
+    return round(Wins_agg, 2)
+    
+
 
 
