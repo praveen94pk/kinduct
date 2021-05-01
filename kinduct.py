@@ -44,7 +44,16 @@ def task1_string_conversion(kinduct_data):
     return(teamid)
     print('Executed Task 1')
     
+#Task 2: year to Year
 
+def task2_rename(kinduct_data):
+    print('Started Task 2')
+    year_change= kinduct_data.rename(columns={"year": "Year"})
+    return(year_change)
+    print('Executed Task 2')
+    
+
+#Implementation: The first letter of the year is in small letter and changed into capital letter by using rename function.
 
 
 
