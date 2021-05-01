@@ -78,4 +78,25 @@ def task3_wins_agg(summation, total_players):
 #1. To know the total number of players played we have applied unique function to avoid duplication and stored up in the list to count the number on players played in the hockey league. 
 #2. Finally, to compute the aggregations we have calculated the total number of wins by a player and divided by the total number of players as mentioned. 
 
+#Task 4: Losses_agg: total losses / total players
+        
+#Calculating the Losing Average of the Players. 
+
+#Assumptions : Assuming the lossing aggregation has to be calculated according to the players level. 
+#To acheive this we are grouping the data according to the players played in the hockey matches respectively.
+
+
+def task4_losses_agg(summation, total_players):
+    print('Started Task 4')
+    Losses= summation["L"]
+    Losses_agg = round((Losses/total_players),2)
+    print('Executed Task 4')
+    return round(Losses_agg, 2)
+    
+
+#Implementation:
+
+#1. The summation data frame having all the summed up numerical columns grouped by the playerID. The column L in the data frame has the losses calculated according to the players 
+#2. Computation done by dividing the total losses by total number of players played.
+
 
