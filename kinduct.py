@@ -99,4 +99,23 @@ def task4_losses_agg(summation, total_players):
 #1. The summation data frame having all the summed up numerical columns grouped by the playerID. The column L in the data frame has the losses calculated according to the players 
 #2. Computation done by dividing the total losses by total number of players played.
 
+#Task 5: GP_agg: total games played / total players
+        
+#Assumptions : Assuming the games played aggregation has to be calculated according to the players level. 
+#To acheive this we are grouping the data accordingly to the players played in the hockey matches respectively.
+
+def task5_gp_agg(summation, total_players):
+    print('Started Task 5')
+    games_played = summation["GP"]
+    games_played_agg = (games_played/total_players)
+    print('Executed Task 5')
+    return round(games_played_agg, 2)
+    
+
+
+#Implementation: 
+
+#1. The summation data frame having all the summed up numerical columns grouped according to the playerID. The column GP in
+#the data frame having the summation of games played.
+#2. Games played divided by the total number of players gives us the aggregation of games played.
 
