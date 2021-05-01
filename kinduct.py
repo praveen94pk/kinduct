@@ -134,3 +134,19 @@ def task6_ga_agg(summation):
 #1. The summation data frame having all the summed up numerical columns grouped according to the playerID. 
 #2. The minutes over the goals against, column Min (Minutes) in
 #the data frame having the summation of total minutes played and column GA has total goals against.
+
+#Task 7: GA_over_SA_agg: total goals against / total shots against
+        
+#Assumptions : Assuming the GA over SA aggregation has to be calculated according to the players level.
+
+def task7_ga_over_sa_agg(summation):
+    print('Started Task 7')
+    ga_over_sa_agg = summation["GA"]/summation["SA"]
+    print('Executed Task 7')
+    return round(ga_over_sa_agg, 2)
+    
+#Implementation: 
+
+#1. The summation data frame has all the summed up numerical columns grouped according to the playerID. 
+#2. Aggregation done by dividing summation of goals against divided by the summation of shots against.
+
