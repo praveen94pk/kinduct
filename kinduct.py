@@ -29,6 +29,11 @@ total_teams = len(teams.unique().tolist())
 
 summation_team = kinduct_data.groupby(['tmID']).sum()
 
+#Implementation
+#1. Firstly, we are dropping the unwanted columns which are not useful for our current and future analysis. 
+#2. The playersID got grouped by and summed up the numerical columns accordingly to support our upcoming analysis and finally stored in the summation pandas data frame.
+#3. This greatly helps to answer our task 3, 4, 5, 6 and 7. 
+
 
 #Downloaded the data set from Kaggle and stored as CSV file format in the local system 
 #and Reading the CSV file as Data Frame using pandas library. 
@@ -68,6 +73,9 @@ def task3_wins_agg(summation, total_players):
     print('Executed Task 3')
     return round(Wins_agg, 2)
     
+#Implementation: 
 
+#1. To know the total number of players played we have applied unique function to avoid duplication and stored up in the list to count the number on players played in the hockey league. 
+#2. Finally, to compute the aggregations we have calculated the total number of wins by a player and divided by the total number of players as mentioned. 
 
 
